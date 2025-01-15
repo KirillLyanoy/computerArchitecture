@@ -1,20 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "P:\\\u0423\u0447\u0451\u0431\u0430\\\u0410\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0430 \u042D\u0412\u041C\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\computerArchitecture\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 2\\Example\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{99E11DDA-790C-48DC-88CE-4885A0D4FF53}|Example.vcxproj|P:\\\u0423\u0447\u0451\u0431\u0430\\\u0410\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0430 \u042D\u0412\u041C\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\computerArchitecture\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 2\\Example\\Example.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{99E11DDA-790C-48DC-88CE-4885A0D4FF53}|Example.vcxproj|solutionrelative:Example.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99E11DDA-790C-48DC-88CE-4885A0D4FF53}|Example.vcxproj|P:\\\u0423\u0447\u0451\u0431\u0430\\\u0410\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0430 \u042D\u0412\u041C\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\computerArchitecture\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 2\\Example\\simple_computer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{99E11DDA-790C-48DC-88CE-4885A0D4FF53}|Example.vcxproj|solutionrelative:simple_computer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99E11DDA-790C-48DC-88CE-4885A0D4FF53}|Example.vcxproj|P:\\\u0423\u0427\u0401\u0411\u0410\\\u0410\u0420\u0425\u0418\u0422\u0415\u041A\u0422\u0423\u0420\u0410 \u042D\u0412\u041C\\\u041B\u0410\u0411\u041E\u0420\u0410\u0422\u041E\u0420\u041D\u042B\u0415 \u0420\u0410\u0411\u041E\u0422\u042B\\COMPUTERARCHITECTURE\\\u041B\u0410\u0411\u041E\u0420\u0410\u0422\u041E\u0420\u041D\u0410\u042F \u0420\u0410\u0411\u041E\u0422\u0410 2\\EXAMPLE\\SIMPLE_COMPUTER.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{99E11DDA-790C-48DC-88CE-4885A0D4FF53}|Example.vcxproj|solutionrelative:SIMPLE_COMPUTER.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\repos\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 2\\Example\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,8 +9,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -34,50 +25,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "simple_computer.cpp",
-              "DocumentMoniker": "P:\\\u0423\u0447\u0451\u0431\u0430\\\u0410\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0430 \u042D\u0412\u041C\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\computerArchitecture\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 2\\Example\\simple_computer.cpp",
-              "RelativeDocumentMoniker": "simple_computer.cpp",
-              "ToolTip": "P:\\\u0423\u0447\u0451\u0431\u0430\\\u0410\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0430 \u042D\u0412\u041C\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\computerArchitecture\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 2\\Example\\simple_computer.cpp",
-              "RelativeToolTip": "simple_computer.cpp",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-13T13:07:31.54Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "simple_computer.h",
-              "DocumentMoniker": "P:\\\u0423\u0447\u0451\u0431\u0430\\\u0410\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0430 \u042D\u0412\u041C\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\computerArchitecture\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 2\\Example\\simple_computer.h",
-              "RelativeDocumentMoniker": "simple_computer.h",
-              "ToolTip": "P:\\\u0423\u0447\u0451\u0431\u0430\\\u0410\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0430 \u042D\u0412\u041C\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\computerArchitecture\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 2\\Example\\simple_computer.h",
-              "RelativeToolTip": "simple_computer.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-13T13:01:26.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Example.cpp",
-              "DocumentMoniker": "P:\\\u0423\u0447\u0451\u0431\u0430\\\u0410\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0430 \u042D\u0412\u041C\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\computerArchitecture\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 2\\Example\\Example.cpp",
-              "RelativeDocumentMoniker": "Example.cpp",
-              "ToolTip": "P:\\\u0423\u0447\u0451\u0431\u0430\\\u0410\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0430 \u042D\u0412\u041C\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B\\computerArchitecture\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430 2\\Example\\Example.cpp",
-              "RelativeToolTip": "Example.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-13T12:58:06.333Z",
-              "EditorCaption": ""
             }
           ]
         }
