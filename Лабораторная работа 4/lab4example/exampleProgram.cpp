@@ -19,6 +19,7 @@ int main() {
     bc_printbigchar(SYMBOL_9, 2, 30, WHITE, GREEN);
     bc_printbigchar(SYMBOL_5, 10, 40, MAGENTA, CYAN); 
     bc_printbigchar(SYMBOL_0, 20, 15, YELLOW, RED); 
+    printf("\n");
 
     bc_setbigcharpos(SYMBOL_0, 4, 7, 0);
     bc_printbigchar(SYMBOL_0, 30, 15, YELLOW, RED); 
@@ -30,20 +31,21 @@ int main() {
     printf("Value (number - 9; row - 1, column - 7) = %d\n", value);
 
     
-    int fd = open("numbers.bin", O_RDWR | O_CREAT, 0644);
+    int fd = open("numbers.bin", O_WRONLY | O_CREAT, 0644);
     
-    bc_bigcharwrite(fd, SYMBOL_0, 1);
+    int SYMBOL_6[2] = { BIG_SYMBOL_6 };
+    bc_bigcharwrite(fd, SYMBOL_6, 1);
     printf("Number written in file.\n");
-          
+    close(fd);
+    
     int read_number[2];
     int read_count;
+    fd = open("numbers.bin", O_RDONLY, 0644);  
     bc_bigcharread(fd, read_number, 1, &read_count);
-
-    lseek(fd, 0, SEEK_SET);
-    
+    close(fd);
+ 
     printf("Number readed from file.");
     bc_printbigchar(read_number, 60, 70, BLUE, WHITE);
-  
-    close(fd);
+
     return 0;
 }
