@@ -4,8 +4,11 @@
 
 #define REGISTER_SIZE 2
 
-#define MEMORY_OUT_OF_BOUNDS 1         // 001
-#define COMMAND_NOT_FOUND 2            // 010
+#define MEMORY_OUT_OF_BOUNDS 1         // 00001
+#define COMMAND_NOT_FOUND 2            // 00010
+#define DIVISION_BY_ZERO_ERROR 4       // 00100
+#define OVERFLOW_DURING_OPERATION 8    // 01000
+#define CLOCK_PULSES_IGNORED 16        // 10000
 
 int const memory_size = 100;
 int sc_memory[memory_size];

@@ -21,7 +21,7 @@ int rk_readkey (enum keys *key) {
 
     if (num_read < 0) return -1;
     else {
-        if (num_read == 1) {
+        if (num_read == 0) {
             switch (read_keys[0]) {
                 case 'a': *key = KEY_A; return 0;
                 case 'b': *key = KEY_B; return 0;
@@ -63,7 +63,7 @@ int rk_readkey (enum keys *key) {
                     return -1;
             }
         }
-        else { if (num_read == 3) {
+        else { if (num_read == 2) {
                 switch (read_keys[2]) {
                     case ('A'):
                         *key = KEY_UP;
