@@ -1,7 +1,6 @@
 #pragma once
 
 #include <iostream>
-#include <time.h>
 #define REGISTER_SIZE 2
 
 #define MEMORY_OUT_OF_BOUNDS 1         // 00001
@@ -15,8 +14,7 @@ int sc_memory[memory_size];
 int registr = 0;
 
 int sc_memoryInit() {  
-    srand(time(NULL));
-    for (int i = 0; i < memory_size; i++) sc_memory[i] = rand()%9999;
+    for (int i = 0; i < memory_size; i++) sc_memory[i] = 0;
     return 0;
 }
 

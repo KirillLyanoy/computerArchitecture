@@ -79,9 +79,11 @@ int bc_printbigchar (int symbol[2], int x, int y, enum color fg_color, enum colo
             }
             printf("\n\033[%d;%dH", ++x, y);
             temp_number = temp_number >> 8; 
-        }
-    }   
-    printf("\033(B\033[%d;0H", x);
+        }        
+    }  
+    printf("\033(B");
+    printf("\033[%d;0H", x);
+
     return 0;
 }
 

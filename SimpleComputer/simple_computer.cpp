@@ -1,10 +1,13 @@
+#include <stdio.h>
+#include <unistd.h>
 #include "myBigChars.h"
 #include "myReadkey.h"
 #include "myTerm.h"
 #include "simple_computer.h"
 
+
 int print_accumulator(int accumulator) {    
-    mt_gotoXY (76, 2); printf("+%04d", accumulator);
+    mt_gotoXY (75, 2); printf("+%04d", accumulator);
     mt_gotoXY (0, 23);
     return 0;
 }
@@ -12,13 +15,12 @@ int print_accumulator(int accumulator) {
 int print_instructionCounter(int selected_cell_index) {
     if (selected_cell_index < 0 || selected_cell_index > 99) return -1;
 
-    mt_gotoXY (76, 5); printf("+%04x", selected_cell_index);
+    mt_gotoXY (75, 5); printf("+%04x", selected_cell_index);
     mt_gotoXY (0, 23);
     return 0;
 }
 
-int draw_console(int *rows, int *cols) {
-    mt_clrscr();
+int draw_console(int *rows, int *cols) {    
     mt_getscreensize(rows, cols);
     bc_box(1, 1, 12, 61);
     bc_box(1, 63, 3, 30);
@@ -40,17 +42,18 @@ int draw_console(int *rows, int *cols) {
     mt_gotoXY (46, 18); printf(" i - reset");
     mt_gotoXY (46, 19); printf(" F5 - accumulator");
     mt_gotoXY (46, 20); printf(" F6 - instructionCounter");
-    mt_gotoXY (0, 23);
+    mt_gotoXY (0, 24);
     return 0;
 }
+
 int print_big_chars(int value) {
     
     int x = 14, y = 10;
-    int digits[4];
-    digits[0] = value / 1000;
-    digits[1] = value / 100 - value / 1000 * 10;
-    digits[2] = value / 10 - value / 100 * 10;
-    digits[3] = value - value / 10 * 10;
+    int digits[4] { value / 1000,
+                    value / 100 - value / 1000 * 10,
+                    value / 10 - value / 100 * 10,
+                    value - value / 10 * 10 };
+
     int big_symbol_0[2] = { BIG_SYMBOL_0 };
     int big_symbol_1[2] = { BIG_SYMBOL_1 };
     int big_symbol_2[2] = { BIG_SYMBOL_2 };
@@ -61,7 +64,7 @@ int print_big_chars(int value) {
     int big_symbol_7[2] = { BIG_SYMBOL_7 };
     int big_symbol_8[2] = { BIG_SYMBOL_8 };
     int big_symbol_9[2] = { BIG_SYMBOL_9 };
-    int big_symbol_plus[2] = { BIG_SYMBOL_PLUS };
+    int big_symbol_plus[2] = { BIG_SYMBOL_PLUS };   
 
     bc_printbigchar(big_symbol_plus, x, 2, DEFAULT, DEFAULT); 
     
@@ -106,14 +109,14 @@ int print_big_chars(int value) {
             case (9): { 
                 bc_printbigchar(big_symbol_9, x, y, DEFAULT, DEFAULT); 
                 break; 
-            }           
-            
+            }                       
             default: return -1;
-        }
-        y += 8;
+        }            
+        y += 8;     
     }
     return 0;
 }
+
 int print_memory(int sc_memory[], int selected_cell_index) {
     if (sc_memory == NULL) return -1;
     int x = 2, y = 2;
@@ -138,9 +141,11 @@ int print_memory(int sc_memory[], int selected_cell_index) {
         x = 2;  
     }
     print_big_chars(selected_cell_value);
+       
     mt_gotoXY (0, 24);
     return 0;
 }
+
 int memory_cell_selection (keys direction, int* selected_cell_index) {
     switch (direction) {
         case(KEY_UP):            
@@ -159,6 +164,7 @@ int memory_cell_selection (keys direction, int* selected_cell_index) {
             return -1;    
     }
 }
+
 int main() {
     rk_mytermsave();
     int rows, cols;
@@ -169,14 +175,16 @@ int main() {
     rk_mytermregime(0, 0, 1, 0, 1);
     sc_memoryInit();
     while(true) {
+        mt_clrscr();
+
         draw_console(&rows, &cols);
         print_memory(sc_memory, selected_cell_index);
         print_accumulator(accumulator);
         print_instructionCounter(selected_cell_index);
+        fflush(stdout);
 
         rk_readkey(&key);
         if (37 <= key <= 40) memory_cell_selection(key, &selected_cell_index);
-
     }
     rk_mytermrestore();
     return 0;
