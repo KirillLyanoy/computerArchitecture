@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#define REGISTER_SIZE 2
+#define REGISTER_SIZE 5
 
 #define MEMORY_OUT_OF_BOUNDS 1         // 00001
 #define COMMAND_NOT_FOUND 2            // 00010

@@ -20,6 +20,24 @@ int print_instructionCounter(int selected_cell_index) {
     return 0;
 }
 
+int print_operation() {
+    return 0;
+}
+
+int print_flags(void) {
+    int value;
+    int y = 73;
+    for (int i = 1; i <= REGISTER_SIZE; i++) {
+        sc_regGet(i, &value);
+        mt_gotoXY (y, 11); 
+        printf("%d ", value);
+        y +=2;
+    }
+
+    mt_gotoXY (0, 23);
+    return 0;
+}
+
 int draw_console(int *rows, int *cols) {    
     mt_getscreensize(rows, cols);
     bc_box(1, 1, 12, 61);
@@ -181,6 +199,9 @@ int main() {
         print_memory(sc_memory, selected_cell_index);
         print_accumulator(accumulator);
         print_instructionCounter(selected_cell_index);
+        //print_operation();
+        print_flags();
+        
         fflush(stdout);
 
         rk_readkey(&key);
