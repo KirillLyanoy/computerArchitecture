@@ -4,8 +4,7 @@
 #include <termios.h>
 
 enum keys {
-    KEY_A = 1, KEY_B = 2, KEY_C = 3, KEY_D = 4, KEY_E = 5, KEY_F = 6, KEY_G = 7, KEY_H = 8, KEY_I = 9, KEY_J = 10, KEY_K = 11, KEY_L = 12, KEY_M = 13,
-    KEY_N = 14, KEY_O = 15, KEY_P = 16, KEY_Q = 17, KEY_R = 18, KEY_S = 19, KEY_T = 20, KEY_U = 21, KEY_V = 22, KEY_W = 23, KEY_X = 24, KEY_Y = 25, KEY_Z = 26,
+    KEY_I = 9, KEY_L = 12, KEY_R = 18, KEY_S = 19, KEY_T = 20,
 
     KEY_1 = 27, KEY_2 = 28, KEY_3 = 29, KEY_4 = 30, KEY_5 = 31, KEY_6 = 32, KEY_7 = 33, KEY_8 = 34, KEY_9 = 35, KEY_0 = 36,
 
@@ -23,32 +22,11 @@ int rk_readkey (enum keys *key) {
     else {
         if (num_read == 0) {
             switch (read_keys[0]) {
-                case 'a': *key = KEY_A; return 0;
-                case 'b': *key = KEY_B; return 0;
-                case 'c': *key = KEY_C; return 0;
-                case 'd': *key = KEY_D; return 0;
-                case 'e': *key = KEY_E; return 0;
-                case 'f': *key = KEY_F; return 0;
-                case 'g': *key = KEY_G; return 0;
-                case 'h': *key = KEY_H; return 0;
                 case 'i': *key = KEY_I; return 0;
-                case 'j': *key = KEY_J; return 0;
-                case 'k': *key = KEY_K; return 0;
                 case 'l': *key = KEY_L; return 0;
-                case 'm': *key = KEY_M; return 0;
-                case 'n': *key = KEY_N; return 0;
-                case 'o': *key = KEY_O; return 0;
-                case 'p': *key = KEY_P; return 0;
-                case 'q': *key = KEY_Q; return 0;
                 case 'r': *key = KEY_R; return 0;
                 case 's': *key = KEY_S; return 0;
                 case 't': *key = KEY_T; return 0;
-                case 'u': *key = KEY_U; return 0;
-                case 'v': *key = KEY_V; return 0;
-                case 'w': *key = KEY_W; return 0;
-                case 'x': *key = KEY_X; return 0;
-                case 'y': *key = KEY_Y; return 0;
-                case 'z': *key = KEY_Z; return 0;
                 case '0': *key = KEY_0; return 0;
                 case '1': *key = KEY_1; return 0;
                 case '2': *key = KEY_2; return 0;

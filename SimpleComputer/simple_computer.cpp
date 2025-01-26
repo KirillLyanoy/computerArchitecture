@@ -15,9 +15,36 @@ int print_accumulator(int accumulator) {
 int print_instructionCounter(int selected_cell_index) {
     if (selected_cell_index < 0 || selected_cell_index > 99) return -1;
 
-    mt_gotoXY (75, 5); printf("+%04x", selected_cell_index);
+    //mt_gotoXY (75, 5); printf("+%04x", selected_cell_index);
+    mt_gotoXY (77, 5); printf("%d", selected_cell_index);
     mt_gotoXY (0, 23);
     return 0;
+}
+
+int set_instructionCounter(int *selected_cell_index) {
+    int ic;
+    
+    rk_mytermrestore();
+    printf("Memory address: ");
+    scanf("%d", &ic);
+    rk_mytermregime(0, 0, 1, 0, 1);
+    if (ic < 0 || ic > 99) return -1;
+
+    *selected_cell_index = ic;
+    return 0; 
+}
+
+int set_accumulator(int *accumulator) {
+    int acc;
+    
+    rk_mytermrestore();
+    printf("Accumulator value: ");
+    scanf("%d", &acc);
+    rk_mytermregime(0, 0, 1, 0, 1);
+    if (acc < 0 || acc > 9999) return -1;
+
+    *accumulator = acc;
+    return 0; 
 }
 
 int print_operation() {
@@ -214,6 +241,8 @@ int main() {
     keys key;
     rk_mytermregime(0, 0, 1, 0, 1);
     sc_memoryInit();
+    char file[] = "memory.txt";
+
     while(true) {
         mt_clrscr();
 
@@ -227,6 +256,33 @@ int main() {
         fflush(stdout);
 
         rk_readkey(&key);
+
+        switch(key) {
+            case (37): //up
+                memory_cell_selection(key, &selected_cell_index); break;
+            case (38): //down
+                memory_cell_selection(key, &selected_cell_index); break;
+            case (39): //left
+                memory_cell_selection(key, &selected_cell_index); break;
+            case (40): //right
+                memory_cell_selection(key, &selected_cell_index); break;
+            case (9): //i 
+                sc_memorySave(file); break;
+            case (12): //l 
+                sc_memorySave(file); break;
+            case (18): //r 
+                break;
+            case (19): //s 
+                break;
+            case (20): //t 
+                break;
+            case (41): //f5                
+                set_accumulator(&accumulator); break;
+            case (42): //f6
+                set_instructionCounter(&selected_cell_index); break;
+            default: break;
+        }
+
         if (37 <= key <= 40) memory_cell_selection(key, &selected_cell_index);
     }
     rk_mytermrestore();
